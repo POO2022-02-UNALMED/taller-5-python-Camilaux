@@ -11,13 +11,14 @@ class Animal:
     def movimiento(self):
         return "desplazarse"
 
+    @classmethod
     def totalPorTipo(self):
         from zooAnimales.mamifero import Mamifero
         from zooAnimales.ave import Ave
         from zooAnimales.reptil import Reptil
         from zooAnimales.pez import Pez
         from zooAnimales.anfibio import Anfibio
-        return "Mamiferos: " + Mamifero.cantidadMamiferos() + "\nAves: " + Ave.cantidadAves() + "\nReptiles: " + Reptil.cantidadReptiles() + "\nPeces: " + Pez.cantidadPeces() + "\nAnfibios: " + Anfibio.cantidadAnfibios()
+        return f"Mamiferos: {Mamifero.cantidadMamiferos()}\nAves: {Ave.cantidadAves()}\nReptiles: {Reptil.cantidadReptiles()}\nPeces: {Pez.cantidadPeces()}\nAnfibios: {Anfibio.cantidadAnfibios()}"
     
     @classmethod
     def getTotalAnimales(cls):
@@ -53,9 +54,9 @@ class Animal:
     def setZona(self,zona):
         self._zona = zona
 
-    def __str__(self):
-        if self.len(self.getZona()) != 0:
-            cadena = "Mi nombre es " + self._nombre + ", tengo una edad de " + self._edad + ", habito en " + self._habitat + " y mi genero es " + self._genero + ", la zona en la que me ubico es " + self.getZona() + ", en el " + self.getNombre()
+    def toString(self):
+        if self._zona != None:
+            cadena = f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}, la zona en la que me ubico es {self.getZona()}, en el {self.getNombre()}"
         else:
-            cadena = "Mi nombre es " + self._nombre + ", tengo una edad de " + self._edad + ", habito en " + self._habitat + " y mi genero es " + self._genero
+            cadena = f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}"
         return cadena
