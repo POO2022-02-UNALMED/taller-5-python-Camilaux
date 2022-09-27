@@ -16,7 +16,7 @@ class Reptil(Animal):
         return len(cls._listado)
 
     def movimiento(self):
-        return "tierra"
+        return "reptar"
 
     @classmethod
     def crearIguana(cls, nombre, edad, genero):

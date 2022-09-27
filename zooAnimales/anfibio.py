@@ -16,7 +16,7 @@ class Anfibio(Animal):
         return len(cls._listado)
 
     def movimiento(self):
-        return "arrastar"
+        return "saltar"
 
     @classmethod
     def crearRana(cls,nombre, edad, genero):
