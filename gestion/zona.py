@@ -1,5 +1,5 @@
 class Zona:
-    def __init__(self, nombre, zoologico):
+    def __init__(self, nombre, zoologico=None):
         self._nombre = nombre
         self._zoo = zoologico
         self._animales = []
